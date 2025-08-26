@@ -7,7 +7,7 @@ const routes = [
     path: "/",
     component: Default,
     children: [
-      { path: "", component: Home },
+      { path: "/", component: Home },
     ]
   }
 ];

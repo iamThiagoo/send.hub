@@ -12,9 +12,21 @@
   "app": {
     "windows": [
       {
+        "label": "splashscreen",
+        "title": "send.hub - Carregando...",
+        "url": "splashscreen.html",
+        "width": 1024,
+        "height": 768,
+        "fullscreen": false,
+        "center": true
+      },
+      {
+        "label": "main",
         "title": "send.hub - Notifique seus Clientes",
         "width": 1024,
-        "height": 768
+        "height": 768,
+        "visible": false,
+        "center": true
       }
     ],
     "security": {

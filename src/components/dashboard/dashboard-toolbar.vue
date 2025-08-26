@@ -5,7 +5,7 @@
     <div class="flex">
       <button
         @click="toggleSidebar"
-        class="flex cursor-pointer gap-3 items-center text-gray-600 hover:text-black transition mr-4 dark:text-gray-300"
+        class="flex cursor-pointer gap-3 items-center text-gray-600 hover:text-black dark:hover:text-gray-200 transition mr-4 dark:text-gray-300"
       >
         <component :is="isSidebarOpen ? PanelRightOpen : PanelRightClose" class="w-6 h-6" />
         <h2 class="text-xl font-semibold">

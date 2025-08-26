@@ -4,7 +4,7 @@
     <div
       class="main-content w-full overflow-y-auto bg-slate-200/70 dark:bg-slate-900"
       :class="{
-        'pl-60': isSidebarOpen,
+        'pl-60 lg:pl-72': isSidebarOpen,
         'pl-16': !isSidebarOpen,
       }"
     >

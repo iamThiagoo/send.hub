@@ -1,6 +1,6 @@
 <template>
   <nav
-    :class="!isSidebarOpen ? 'w-16' : 'md:min-w-60'"
+    :class="!isSidebarOpen ? 'w-16' : 'md:min-w-60 lg:min-w-72'"
     class="py-5 flex fixed left-0 justify-between flex-col h-lvh border-r border-gray-200 bg-slate-800 dark:border-gray-700"
   >
     <div>
@@ -59,7 +59,7 @@
         :orientation="'vertical'"
         :items="[
           {
-            label: 'Suporte  ',
+            label: 'Suporte send.hub',
             icon: 'lucide:headset',
             to: 'https://github.com/iamThiagoo/send.dev.git',
             target: '_blank',
