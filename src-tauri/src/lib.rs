@@ -13,6 +13,7 @@ pub fn run() {
     // Don't write code before Tauri starts, write it in the
     // setup hook instead!
     tauri::Builder::default()
+        .plugin(tauri_plugin_single_instance::init(|app, args, cwd| {}))
         // Register a `State` to be managed by Tauri
         // We need write access to it so we wrap it in a `Mutex`
         .manage(Mutex::new(SetupState {
@@ -33,6 +34,15 @@ pub fn run() {
         // Run the app
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
+
+    #[cfg(desktop)]
+    {
+        builder = builder.plugin(tauri_plugin_single_instance::init(|app, args, cwd| {
+            let _ = app.get_webview_window("main")
+                       .expect("no main window")
+                       .set_focus();
+        }));
+    }
 }
 
 #[tauri::command]
