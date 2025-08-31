@@ -16,7 +16,7 @@
         "title": "send.hub - Carregando...",
         "url": "splashscreen.html",
         "width": 1024,
-        "height": 768,
+        "height": 800,
         "fullscreen": false,
         "center": true
       },
@@ -24,7 +24,7 @@
         "label": "main",
         "title": "send.hub - Notifique seus Clientes",
         "width": 1024,
-        "height": 768,
+        "height": 800,
         "visible": false,
         "center": true
       }

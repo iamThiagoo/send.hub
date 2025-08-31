@@ -18,7 +18,7 @@
       <UDropdownMenu
         :items="items"
         :ui="{
-          content: 'w-48',
+          content: 'w-40',
         }"
       >
         <UAvatar
@@ -32,12 +32,12 @@
 </template>
 
 <script lang="ts" setup>
-import { PanelRightOpen, PanelRightClose } from 'lucide-vue-next'
-import { useRoute } from 'vue-router'
-import { computed, ref } from 'vue'
-import type { DropdownMenuItem } from '@nuxt/ui'
-import { useSystemStore } from '../../stores/system'
-import Theme from '../button/theme.vue'
+import { PanelRightOpen, PanelRightClose } from 'lucide-vue-next';
+import { useRoute } from 'vue-router';
+import { computed, ref } from 'vue';
+import type { DropdownMenuItem } from '@nuxt/ui';
+import { useSystemStore } from '../../stores/system';
+import Theme from '../button/theme.vue';
 
 const items = ref<DropdownMenuItem[][]>([
   [
@@ -53,21 +53,21 @@ const items = ref<DropdownMenuItem[][]>([
       class: 'cursor-pointer',
     },
   ],
-])
+]);
 
-const route = useRoute()
-const isSidebarOpen = computed(() => systemStore.sidebarOpen)
-const systemStore = useSystemStore()
+const route = useRoute();
+const isSidebarOpen = computed(() => systemStore.sidebarOpen);
+const systemStore = useSystemStore();
 
 const capitalizedRouteName = computed(() => {
-  const name = route.name as string
-  if (!name) return ''
-  if (name === 'index') return 'Home'
-  if (name === 'recipients') return 'Destinatários'
-  return name.charAt(0).toUpperCase() + name.slice(1)
-})
+  const name = route.name as string;
+  if (!name) return '';
+  if (name === 'index') return 'Home';
+  if (name === 'recipients') return 'Destinatários';
+  return name.charAt(0).toUpperCase() + name.slice(1);
+});
 
 const toggleSidebar = () => {
-  systemStore.sidebarToggle()
-}
+  systemStore.sidebarToggle();
+};
 </script>

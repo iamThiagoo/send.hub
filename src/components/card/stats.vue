@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-slate-100 p-4 rounded-md border border-slate-200 dark:bg-slate-800 dark:border-slate-700"
+    class="bg-slate-100 p-4 rounded-md border border-slate-200 dark:bg-slate-800 dark:border-slate-700 hover:opacity-80 cursor-pointer"
   >
     <div
       class="inline-block p-2 bg-primary-200 border border-primary-300 rounded-full items-center justify-center"
@@ -26,5 +26,5 @@ const props = defineProps({
     type: Number,
     required: true,
   },
-})
+});
 </script>

@@ -1,24 +1,34 @@
 <template>
   <section>
+    <UBreadcrumb :items="items" class="mb-7" />
+
     <h1 class="text-3xl font-bold dark:text-violet-400">
-      Bem-vindo(a) de volta Thiago, <span class="wave text-3xl">👋</span>
+      Olá Thiago, <span class="wave text-3xl">👋</span>
     </h1>
     <p class="mt-1 font-medium">
       Abaixo estão algumas informações gerais do seu uso na plataforma:
     </p>
 
-    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <Stats :icon="MailCheck" title="Emails Enviados" :value="800" />
-      <CardStats :icon="LayoutTemplate" title="Templates Criados" :value="12" />
-      <CardStats :icon="Users" title="Destinatários Adicionados" :value="5" />
+    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
+      <Stats :icon="Mail" title="Notificações Enviadas" :value="12" />
+      <Stats :icon="Users" title="Clientes Cadastrados" :value="800" />
     </div>
-
   </section>
 </template>
 
 <script lang="ts" setup>
-import { MailCheck, LayoutTemplate, Users } from 'lucide-vue-next'
+import { Users, Mail } from 'lucide-vue-next';
 import Stats from '../components/card/stats.vue';
+import { BreadcrumbItem } from '@nuxt/ui';
+import { ref } from 'vue';
+
+const items = ref<BreadcrumbItem[]>([
+  {
+    label: 'Dashboard',
+    icon: 'i-lucide-house',
+    to: '/',
+  },
+]);
 </script>
 
 <style lang="css" scoped>

@@ -24,10 +24,7 @@
               "text-default hover:text-highlighted group-hover:!text-violet-400",
               "transition-colors before:transition-colors"
             ],
-            "childLinkIcon": [
-              "text-dimmed group-hover:!text-violet-400",
-              "transition-colors"
-            ]
+            "childLinkIcon": ["text-dimmed group-hover:!text-violet-400", "transition-colors"]
           }
         }
       },
@@ -49,10 +46,7 @@
               "hover:text-highlighted hover:before:bg-elevated/50",
               "transition-colors before:transition-colors"
             ],
-            "linkLeadingIcon": [
-              "group-hover:!text-violet-400",
-              "transition-colors"
-            ]
+            "linkLeadingIcon": ["group-hover:!text-violet-400", "transition-colors"]
           }
         },
         {
@@ -69,14 +63,8 @@
           "active": false,
           "variant": "link",
           "class": {
-            "link": [
-              "hover:text-highlighted",
-              "transition-colors"
-            ],
-            "linkLeadingIcon": [
-              "group-hover:text-default",
-              "transition-colors"
-            ]
+            "link": ["hover:text-highlighted", "transition-colors"],
+            "linkLeadingIcon": ["group-hover:text-default", "transition-colors"]
           }
         },
         {

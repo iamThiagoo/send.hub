@@ -17,34 +17,38 @@
         :items="[
           {
             label: 'Dashboard',
-            icon: 'lucide:chart-network',
+            icon: 'lucide:home',
             iconSize: 'w-6 h-6',
-            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-lg py-2 my-2 hover:bg-slate-700 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
+            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-base py-2 my-2 hover:bg-slate-700 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
             to: '/',
+            exact: true,
             tooltip: { text: 'Ir para Home' },
           },
           {
             label: 'Notificar Clientes',
-            icon: 'lucide:send',
+            icon: 'lucide:message-circle',
             iconSize: 'w-6 h-6',
-            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-lg py-2 my-2 hover:bg-slate-600 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
-            to: '/clients',
-            tooltip: { text: 'Ir para Clientes' },
+            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-base py-2 my-2 hover:bg-slate-600 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
+            to: '/notification',
+            exact: true,
+            tooltip: { text: 'Ir para Notificar Clientes' },
           },
           {
             label: 'Clientes',
             icon: 'lucide:users',
             iconSize: 'w-6 h-6',
-            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-lg py-2 my-2 hover:bg-slate-600 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
+            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-base py-2 my-2 hover:bg-slate-600 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
             to: '/clients',
+            exact: true,
             tooltip: { text: 'Ir para Clientes' },
           },
           {
             label: 'Histórico',
             icon: 'lucide:history',
             iconSize: 'w-6 h-6',
-            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-lg py-2 my-2 hover:bg-slate-700 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
+            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-base py-2 my-2 hover:bg-slate-700 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
             to: '/executions',
+            exact: true,
             tooltip: { text: 'Ir para Execuções' },
           },
         ]"
@@ -59,12 +63,12 @@
         :orientation="'vertical'"
         :items="[
           {
-            label: 'Suporte send.hub',
+            label: 'Suporte',
             icon: 'lucide:headset',
             to: 'https://github.com/iamThiagoo/send.dev.git',
             target: '_blank',
             iconSize: 'w-6 h-6',
-            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-lg py-2 my-2 hover:bg-slate-700 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
+            class: `bg-slate-800 text-gray-200 flex gap-x-3 text-base py-2 my-2 hover:bg-slate-700 hover:text-violet-400 rounded-lg transition-colors ${!isSidebarOpen ? 'justify-center' : ''}`,
             tooltip: { text: 'Ir para Github' },
           },
         ]"
@@ -89,17 +93,17 @@
 </template>
 
 <script lang="ts" setup>
-import { DoorClosed, DoorOpen } from 'lucide-vue-next'
-import { computed, watch } from 'vue'
-import { useSystemStore } from '../../stores/system'
+import { DoorClosed, DoorOpen } from 'lucide-vue-next';
+import { computed, watch } from 'vue';
+import { useSystemStore } from '../../stores/system';
 
-const systemStore = useSystemStore()
-const isSidebarOpen = computed(() => systemStore.sidebarOpen)
+const systemStore = useSystemStore();
+const isSidebarOpen = computed(() => systemStore.sidebarOpen);
 
 watch(
   () => systemStore.sidebarOpen,
   (_newValue) => {
     // console.log(newValue)
-  }
-)
+  },
+);
 </script>

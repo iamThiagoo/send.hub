@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
 * {
-    font-family: 'Inter', 'Segoe-UI', sans-serif !important;
+  font-family: 'Inter', 'Segoe-UI', sans-serif !important;
 }
 
-html, body, #__nuxt {
-  transition: background-color 0.4s ease, color 0.4s ease;
+html,
+body,
+#__nuxt {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 i {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }

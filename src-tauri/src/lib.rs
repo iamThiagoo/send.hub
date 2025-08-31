@@ -35,14 +35,14 @@ pub fn run() {
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 
-    #[cfg(desktop)]
-    {
-        builder = builder.plugin(tauri_plugin_single_instance::init(|app, args, cwd| {
-            let _ = app.get_webview_window("main")
-                       .expect("no main window")
-                       .set_focus();
-        }));
-    }
+    // #[cfg(desktop)]
+    // {
+    //     builder = builder.plugin(tauri_plugin_single_instance::init(|app, args, cwd| {
+    //         let _ = app.get_webview_window("main")
+    //                    .expect("no main window")
+    //                    .set_focus();
+    //     }));
+    // }
 }
 
 #[tauri::command]
@@ -79,7 +79,7 @@ async fn set_complete(
 async fn setup(app: AppHandle) -> Result<(), ()> {
     // Fake performing some heavy action for 3 seconds
     println!("Performing really heavy backend setup task...");
-    sleep(Duration::from_secs(3)).await;
+    sleep(Duration::from_secs(2)).await;
     println!("Backend setup task completed!");
     // Set the backend task as being completed
     // Commands can be ran as regular functions as long as you take

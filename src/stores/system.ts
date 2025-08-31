@@ -1,5 +1,5 @@
 // stores/system.ts
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useSystemStore = defineStore('systemStore', {
   persist: true,
@@ -8,11 +8,11 @@ export const useSystemStore = defineStore('systemStore', {
   }),
   actions: {
     sidebarToggle() {
-      this.sidebarOpen = !this.sidebarOpen
+      this.sidebarOpen = !this.sidebarOpen;
     },
 
     sidebarOpenSet(value: boolean) {
-      this.sidebarOpen = value
+      this.sidebarOpen = value;
     },
   },
-})
+});

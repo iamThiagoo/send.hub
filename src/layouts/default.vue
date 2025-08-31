@@ -10,9 +10,9 @@
     >
       <div>
         <DashboardToolbar />
-        <div class="container mx-auto py-8 px-5">
-          <slot />
-        </div>
+        <UContainer class="container mx-auto pt-7 pb-6 w-11/12">
+          <router-view />
+        </UContainer>
       </div>
     </div>
   </main>
@@ -23,6 +23,6 @@ import { computed } from 'vue';
 import { useSystemStore } from '../stores/system';
 import DashboardToolbar from '../components/dashboard/dashboard-toolbar.vue';
 import DashboardSidebar from '../components/dashboard/dashboard-sidebar.vue';
-const systemStore = useSystemStore()
-const isSidebarOpen = computed(() => systemStore.sidebarOpen)
+const systemStore = useSystemStore();
+const isSidebarOpen = computed(() => systemStore.sidebarOpen);
 </script>

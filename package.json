@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "format": "npx prettier --write .",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
@@ -11,20 +12,26 @@
   },
   "dependencies": {
     "@nuxt/ui": "^3.3.2",
+    "@tanstack/vue-table": "^8.21.3",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
+    "@vee-validate/zod": "^4.15.1",
     "lucide-vue-next": "^0.541.0",
     "pinia": "^3.0.3",
     "pinia-plugin-persistedstate": "^4.5.0",
+    "vee-validate": "^4.15.1",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "zod": "^4.1.5"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
     "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "prettier": "^3.6.2",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
+    "vite-plugin-vue-devtools": "^8.0.1",
     "vue-tsc": "^2.1.10"
   }
 }
